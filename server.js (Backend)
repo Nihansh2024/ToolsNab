@@ -1,0 +1,23 @@
+const express = require("express");
+const fs = require("fs");
+const path = require("path");
+
+const app = express();
+
+app.use(express.static("public"));
+
+app.get("/api/calculators", (req, res) => {
+  const data = fs.readFileSync("./data/calculators.json");
+  res.json(JSON.parse(data));
+});
+
+app.get("/api/calc/:id", (req, res) => {
+  const data = JSON.parse(fs.readFileSync("./data/calculators.json"));
+  const calc = data.find(c => c.id === req.params.id);
+
+  if (!calc) return res.status(404).json({ error: "Not found" });
+  res.json(calc);
+});
+
+const PORT = 3000;
+app.listen(PORT, () => console.log("Server running on http://localhost:" + PORT));
