@@ -1,0 +1,13 @@
+[
+  { "id":"bmi", "name":"BMI Calculator", "category":"Fitness" },
+  { "id":"age", "name":"Age Calculator", "category":"Other" },
+  { "id":"percentage", "name":"Percentage Calculator", "category":"Math" },
+  { "id":"loan", "name":"Loan Calculator", "category":"Financial" },
+
+  { "id":"gpa","name":"GPA Calculator","category":"Other" },
+  { "id":"date","name":"Date Calculator","category":"Other" },
+  { "id":"scientific","name":"Scientific Calculator","category":"Math" },
+  { "id":"mortgage","name":"Mortgage Calculator","category":"Financial" },
+  { "id":"calorie","name":"Calorie Calculator","category":"Fitness" }
+
+]
